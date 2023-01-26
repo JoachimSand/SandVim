@@ -47,7 +47,7 @@ for _, server in pairs(servers) do
 end
 
 lspconfig["fsharp_language_server"].setup{
-    cmd = {"dotnet", "/home/joachimls/fsharp-language-server-0.1.60/src/FSharpLanguageServer/bin/Release/net6.0/FSharpLanguageServer.dll"},
+    cmd = {"dotnet", "/home/jlsand/fsharp-language-server-0.1.60/src/FSharpLanguageServer/bin/Release/net6.0/FSharpLanguageServer.dll"},
     on_attach = require("user.lsp.handlers").on_attach,
     capabilities = require("user.lsp.handlers").capabilities,
     settings = {}
