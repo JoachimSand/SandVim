@@ -188,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jlsand/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-signify"] = {
+    loaded = true,
+    path = "/home/jlsand/.local/share/nvim/site/pack/packer/start/vim-signify",
+    url = "https://github.com/mhinz/vim-signify"
   }
 }
 
