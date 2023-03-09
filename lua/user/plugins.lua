@@ -82,6 +82,7 @@ return packer.startup(function(use)
 
     -- Git changes
     use "https://github.com/mhinz/vim-signify"
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
