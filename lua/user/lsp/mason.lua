@@ -1,7 +1,8 @@
 local servers = {
-	"sumneko_lua",
+	"lua_ls",
 	"rust_analyzer",
 	"clangd",
+        "pyright",
 }
 
 local settings = {
@@ -22,6 +23,8 @@ require("mason-lspconfig").setup({
 	ensure_installed = servers,
 	automatic_installation = true,
 })
+
+vim.lsp.set_log_level("debug")
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then

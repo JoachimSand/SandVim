@@ -12,7 +12,7 @@ local options = {
   showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
   showtabline = 2,                         -- always show tabs
   smartcase = true,                        -- smart case
-  smartindent = true,                      -- make indenting smarter again
+  smartindent = false,                      -- make indenting smarter again
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
@@ -21,7 +21,7 @@ local options = {
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-  expandtab = true,                        -- convert tabs to spaces
+  expandtab = false,                        -- convert tabs to spaces
   shiftwidth = 4,                          -- the number of spaces inserted for each indentation
   cursorline = false,                       -- highlight the current line
   number = true,                           -- set numbered lines
@@ -33,6 +33,8 @@ local options = {
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
+  autoindent = true,
+  tabstop = 4,
 }
 
 vim.opt.shortmess:append "c"
@@ -44,3 +46,8 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+
+-- Prevent the default python settings from vim overriding settings
+vim.g.python_recommended_style = 0
+
+vim.g.vimspector_enable_mappings='HUMAN'

@@ -70,7 +70,7 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig" -- enable LSP
     use "williamboman/mason.nvim" -- simple to use language server installer
     use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-    use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions (consider removing)
+    -- use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions (consider removing)
 
     -- Is actually a fully-fledged F# LSP, but we only install this for syntax highlighting.
     -- LSP is provided by FSharpLanguageServer. See lua/user/mason.lua
@@ -83,6 +83,8 @@ return packer.startup(function(use)
     -- Git changes
     use "https://github.com/mhinz/vim-signify"
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+	use "puremourning/vimspector"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

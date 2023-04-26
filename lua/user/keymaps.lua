@@ -70,9 +70,24 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Telescope --
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<cr>", opts)
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>r", "<cmd>Telescope lsp_references<cr>", opts)
 
 
-
+-- Vimspector --
+keymap("n", "<leader>dc",	"<cmd>call vimspector#Continue()<cr>", opts)
+keymap("n",	"<leader>dr",	"<cmd>call vimspector#RunToCursor()<cr>", opts)
+keymap("n",	"<leader>dR",	"<cmd>call vimspector#Restart()<cr>", opts)
+keymap("n", "<leader>dt",	"<cmd>call vimspector#ToggleBreakpoint()<cr>", opts)
+keymap("n", "<leader>di",	"<cmd>call vimspector#StepInto()<cr>", opts)
+keymap("n", "<leader>do",	"<cmd>call vimspector#StepOver()<cr>", opts)
+keymap("n", "<leader>du",	"<cmd>call vimspector#StepOut()<cr>", opts)
+--[[
+s = { "<cmd>call vimspector#Launch()<cr>", "Start" },
+t = { "<cmd>call vimspector#ToggleBreakpoint()<cr>", "Toggle Breakpoint" },
+S = { "<cmd>call vimspector#Stop()<cr>", "Stop" },
+r = { "<cmd>call vimspector#Restart()<cr>", "Restart" },
+x = { "<cmd>VimspectorReset<cr>", "Reset" }
+--]]
