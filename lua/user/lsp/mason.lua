@@ -24,7 +24,8 @@ require("mason-lspconfig").setup({
 	automatic_installation = true,
 })
 
-vim.lsp.set_log_level("debug")
+-- Uncomment this to debug LSPs. Increases amount of logs in :LspLog
+-- vim.lsp.set_log_level("debug")
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
