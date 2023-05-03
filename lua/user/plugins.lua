@@ -58,7 +58,7 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-path"
     use "hrsh7th/cmp-cmdline"
-    use "saadparwaiz1/cmp_luasnip" -- snippet completions (req. by nvim-cmp)
+    -- use "saadparwaiz1/cmp_luasnip" -- snippet completions (req. by nvim-cmp)
     use "hrsh7th/cmp-nvim-lsp" -- LSP source for nvim-cmp
     use "hrsh7th/cmp-nvim-lua"
 
