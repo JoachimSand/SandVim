@@ -42,9 +42,13 @@ M.setup = function()
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
     border = "rounded",
   })
+
 end
 
 local function lsp_highlight_document(client)
+
+	-- Disable semantic highlighting. This is a cool feature, but currently not supported by srcery.
+	client.server_capabilities.semanticTokensProvider = nil
   -- Set autocommands conditional on server_capabilities
   if client.server_capabilities.documentHighlightProvider then
     vim.api.nvim_exec(
